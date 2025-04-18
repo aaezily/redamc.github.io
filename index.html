@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guida Comandi Staff - Evercraft</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    .command-table td {
+      white-space: nowrap;
+    }
+    code {
+      background-color: #2a2a2a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 90%;
+      color: #00ffc8;
+    }
+    .alert {
+      background-color: #2c2c2c;
+      border: 1px solid #555;
+      color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="text-center mb-4">📘 Guida Comandi Staff - Evercraft</h1>
+
+    <div class="alert text-center">
+      <strong>🚨 N.B:</strong> L'abuso di questi comandi comporterà la rimozione del ruolo e possibili sanzioni. Usa i poteri con responsabilità!
+    </div>
+
+    <p class="text-center text-secondary">Questa guida è in continuo aggiornamento, tieni presente di consultarla almeno 1 volta a settimana per rimanere aggiornato delle modifiche.</p>
+
+    <div class="command-section">
+      <h2 class="text-success">🟢 Comandi Helper</h2>
+
+      <h5 class="mt-3">Gestione sanzioni:</h5>
+      <table class="table table-dark command-table">
+        <tbody>
+          <tr>
+            <td><code>/ltempmute</code></td>
+            <td>Mute temporaneo (Max 7 giorni)</td>
+          </tr>
+          <tr>
+            <td><code>/lkick</code></td>
+            <td>Espulsione dal server</td>
+          </tr>
+          <tr>
+            <td><code>/lcheckban</code></td>
+            <td>Controlla lo stato dei ban</td>
+          </tr>
+          <tr>
+            <td><code>/lcheckmute</code></td>
+            <td>Controlla lo stato dei mute</td>
+          </tr>
+          <tr>
+            <td><code>/lunmute</code></td>
+            <td>Rimuove un mute</td>
+          </tr>
+          <tr>
+            <td><code>/lmutelist</code></td>
+            <td>Lista dei giocatori mutati</td>
+          </tr>
+          <tr>
+            <td><code>/hist</code> o <code>/history</code></td>
+            <td>Cronologia sanzioni</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h5 class="mt-3">Controllo giocatori:</h5>
+      <table class="table table-dark command-table">
+        <tbody>
+          <tr>
+            <td><code>/lipreport</code></td>
+            <td>Segnalazione IP sospetti</td>
+          </tr>
+          <tr>
+            <td><code>/ldupeip</code></td>
+            <td>Controlla se un IP è condiviso tra più account</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="command-section">
+      <h2 class="text-primary">🔵 Comandi Moderatore</h2>
+      <p>I Moderatori possiedono tutti i comandi degli Helper, più i seguenti:</p>
+
+      <h5 class="mt-3">Gestione avanzata dei ban:</h5>
+      <table class="table table-dark command-table">
+        <tbody>
+          <tr>
+            <td><code>/lban</code></td>
+            <td>Ban permanente</td>
+          </tr>
+          <tr>
+            <td><code>/lunban</code></td>
+            <td>Rimuove un ban</td>
+          </tr>
+          <tr>
+            <td><code>/lipban</code></td>
+            <td>Ban IP</td>
+          </tr>
+          <tr>
+            <td><code>/lcheckban</code></td>
+            <td>Lista dei giocatori bannati</td>
+          </tr>
+          <tr>
+            <td><code>/lbanlist</code></td>
+            <td>Lista dei giocatori bannati</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h5 class="mt-3">Controllo avanzato giocatori:</h5>
+      <table class="table table-dark command-table">
+        <tbody>
+          <tr>
+            <td><code>/ecsee</code></td>
+            <td>Visualizza l'ender chest di un giocatore</td>
+          </tr>
+          <tr>
+            <td><code>/invsee</code></td>
+            <td>Visualizza l'inventario di un giocatore</td>
+          </tr>
+          <tr>
+            <td><code>/pv &lt;nome&gt; &lt;numero&gt;</code></td>
+            <td>Accedi ai private vault di un utente</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="command-section">
+      <h2 class="text-info">🔸 Altri Permessi Generici</h2>
+      <p>Permessi vari legati al comando <code>/rcs</code>, aka redachatstaff:</p>
+      <table class="table table-dark command-table">
+        <tbody>
+          <tr>
+            <td><code>/rcs chat</code></td>
+            <td>Attiva la modalità chat staff</td>
+          </tr>
+          <tr>
+            <td><code>/rcs chat &lt;messaggio&gt;</code></td>
+            <td>Invia solo un messaggio nella staffchat</td>
+          </tr>
+          <tr>
+            <td><code>@&lt;messaggio&gt;</code></td>
+            <td>Messaggio rapido nella staffchat</td>
+          </tr>
+          <tr>
+            <td><code>/rcs hidechat</code></td>
+            <td>Nasconde la chat staff</td>
+          </tr>
+          <tr>
+            <td><code>/rcs showchat</code></td>
+            <td>Mostra nuovamente la chat staff</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="command-section">
+      <h2 class="text-danger">⚠️ Regola Obbligatoria</h2>
+      <p>Tutti i comandi di moderazione (<code>/ban</code>, <code>/mute</code>, ecc.) devono iniziare con la lettera <strong>L</strong>:</p>
+      <table class="table table-dark command-table">
+        <tbody>
+          <tr>
+            <td><code>/lban</code></td>
+            <td>Comando corretto</td>
+          </tr>
+          <tr>
+            <td><code>/ltempmute</code></td>
+            <td>Comando corretto</td>
+          </tr>
+          <tr>
+            <td><code>/lcheckban</code></td>
+            <td>Comando corretto</td>
+          </tr>
+          <tr>
+            <td><code>/ban</code></td>
+            <td>Comando errato</td>
+          </tr>
+          <tr>
+            <td><code>/mute</code></td>
+            <td>Comando errato</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="command-section">
+      <h2 class="text-secondary">📩 Supporto</h2>
+      <p>Se qualche comando non funziona, o vorresti suggerirne uno nuovo, contatta un amministratore nel canale <strong>#🚨〃staff-mc-only</strong> taggando direttamente il responsabile.</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
