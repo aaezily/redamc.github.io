@@ -5,41 +5,30 @@ body {
     padding-bottom: 80px; /* spazio per navbar bottom */
   }
   
-  .card {
+  .card-annuncio {
     background-color: #1a1a1a;
     border: 1px solid #2c2c2c;
     border-radius: 1rem;
+    padding: 1rem;
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.03);
     transition: transform 0.2s ease;
   }
   
-  .card:hover {
+  .card-annuncio:hover {
     transform: scale(1.01);
   }
   
-  .btn {
-    border-radius: 1rem;
+  .card-annuncio h5 {
+    font-size: 1.1rem;
   }
   
-  .list-group-item {
-    background-color: #1a1a1a;
-    border: none;
+  .card-annuncio p {
+    font-size: 0.9rem;
     margin-bottom: 0.5rem;
-    border-radius: 0.5rem;
   }
   
-  .navbar .nav-link {
-    font-size: 14px;
-    padding: 8px;
-  }
-  
-  a {
-    color: #80bfff;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #a3cfff;
-    text-decoration: underline;
+  a.btn {
+    border-radius: 1rem;
+    font-size: 0.9rem;
   }
   

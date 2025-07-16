@@ -9,38 +9,41 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">👨‍💼 Guida Staff</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="comandi.html">Comandi</a></li>
-          <li class="nav-item"><a class="nav-link" href="info.html">Info Staff</a></li>
-        </ul>
-      </div>
+
+  <!-- Navbar top -->
+  <nav class="navbar navbar-dark bg-black shadow-sm sticky-top border-bottom border-secondary">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="navbar-brand fw-bold">👨‍💼 Guida Staff</span>
+      <span class="text-secondary small">🏠 Home</span>
     </div>
   </nav>
 
-  <header class="bg-dark text-white text-center py-5">
-    <div class="container">
-      <h1 class="display-4">Benvenuto nella Guida Staff</h1>
-      <p class="lead text-secondary">Consulta gli annunci e le risorse per lo staff</p>
-    </div>
+  <!-- Intestazione -->
+  <header class="text-center py-4 px-3 border-bottom border-secondary">
+    <h1 class="fs-4 fw-bold">Benvenuto!</h1>
+    <p class="text-secondary mb-0">Controlla gli annunci e le comunicazioni staff</p>
   </header>
 
-  <main class="container my-5">
-    <h2 class="mb-4">📰 Annunci Recenti</h2>
-    <div class="row g-4" id="annunci-container">
-      <!-- Popolato da JS -->
+  <!-- Contenuto principale -->
+  <main class="container my-4">
+    <h2 class="fs-5 mb-3">📰 Annunci Recenti</h2>
+    <div class="d-flex flex-column gap-3" id="annunci-container">
+      <!-- Annunci dinamici JS -->
     </div>
   </main>
 
-  <footer class="text-center text-secondary py-4 border-top border-secondary">
-    <small>© 2025 Guida Staff | Made for GitHub Pages</small>
-  </footer>
+  <!-- Navbar bottom -->
+  <nav class="navbar navbar-dark bg-black border-top border-secondary fixed-bottom d-flex justify-content-around py-2">
+    <a href="index.html" class="nav-link text-white text-center">
+      <div>🏠</div><small>Home</small>
+    </a>
+    <a href="comandi.html" class="nav-link text-white text-center">
+      <div>📋</div><small>Comandi</small>
+    </a>
+    <a href="info.html" class="nav-link text-white text-center">
+      <div>ℹ️</div><small>Info</small>
+    </a>
+  </nav>
 
   <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
