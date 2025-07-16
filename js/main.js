@@ -49,4 +49,8 @@ const annunci = [
     const toast = new bootstrap.Toast(toastEl);
     toast.show();
   }
+
+  function scrollToSez(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
   

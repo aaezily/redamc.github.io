@@ -31,19 +31,41 @@
     </div>
   </nav>
 
-  <!-- Intestazione -->
-  <header class="text-center py-4 px-3 border-bottom border-secondary">
-    <h1 class="fs-4 fw-bold">Benvenuto!</h1>
-    <p class="text-secondary mb-0">Controlla gli annunci e le comunicazioni staff</p>
-  </header>
+  <header class="hero text-center d-flex flex-column justify-content-center align-items-center">
+    <img src="assets/logo.png" alt="Logo" class="hero-logo mb-3">
+    <h1 class="hero-title">Guida Staff</h1>
+    <p class="hero-subtitle">Tutte le risorse e comunicazioni per lo staff</p>
+    <button onclick="scrollToSez('annunci')" class="btn btn-primary btn-lg">Scopri gli annunci</button>
+  </header>  
 
-  <!-- Contenuto principale -->
-  <main class="container my-4">
-    <h2 class="fs-5 mb-3">📰 Annunci Recenti</h2>
-    <div class="d-flex flex-column gap-3" id="annunci-container">
-      <!-- Annunci dinamici JS -->
+  <section id="annunci" class="py-5">
+    <div class="container text-center">
+      <h2>📰 Annunci Recenti</h2>
+      <div class="row mt-4" id="annunci-container"></div>
     </div>
-  </main>
+  </section>
+  
+
+  <section class="info-section py-5 bg-dark text-center">
+    <div class="container">
+      <h2>📌 Quick Info</h2>
+      <div class="row justify-content-center mt-4">
+        <div class="col-6 col-md-3 mb-3">
+          <div class="info-card p-3 rounded">
+            <h3>Ruoli:</h3>
+            <p>Helper, Moderatore, Admin</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <div class="info-card p-3 rounded">
+            <h3>Contatti:</h3>
+            <p>Discord Staff, Forum Privato</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
   <!-- Navbar bottom -->
   <nav class="navbar navbar-dark bg-black border-top border-secondary fixed-bottom d-flex justify-content-around py-2">
@@ -57,6 +79,11 @@
       <div>ℹ️</div><small>Info</small>
     </a>
   </nav>
+
+
+  <footer class="py-4 bg-dark text-center text-secondary">
+    <div>© 2025 Guida Staff • Read the rules • Privacy • TOS</div>
+  </footer>  
 
   <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
