@@ -1,26 +1,45 @@
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #121212;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0d0d0d;
     color: #fff;
+    padding-bottom: 80px; /* spazio per navbar bottom */
   }
   
   .card {
-    background-color: #1e1e1e;
-    border: 1px solid #333;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #1a1a1a;
+    border: 1px solid #2c2c2c;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.03);
+    transition: transform 0.2s ease;
   }
   
   .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transform: scale(1.01);
+  }
+  
+  .btn {
+    border-radius: 1rem;
   }
   
   .list-group-item {
+    background-color: #1a1a1a;
     border: none;
     margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .navbar .nav-link {
+    font-size: 14px;
+    padding: 8px;
   }
   
   a {
+    color: #80bfff;
     text-decoration: none;
+  }
+  
+  a:hover {
+    color: #a3cfff;
+    text-decoration: underline;
   }
   
