@@ -1,15 +1,15 @@
 const annunci = [
     {
       id: 1,
-      titolo: "Nuovo regolamento",
-      contenuto: "Da oggi il regolamento è stato aggiornato. Leggilo con attenzione.",
-      data: "2025-07-16"
+      titolo: "📜 Nuovo regolamento staff",
+      contenuto: "Il regolamento interno è stato aggiornato. Controlla la sezione #staff-info su Discord per tutti i dettagli.",
+      data: "2025-07-15"
     },
     {
       id: 2,
-      titolo: "Meeting staff venerdì",
-      contenuto: "Ricordate il meeting questo venerdì alle 21:00 su Discord.",
-      data: "2025-07-14"
+      titolo: "📅 Meeting staff venerdì",
+      contenuto: "Venerdì 18 ore 21:00 - riunione staff obbligatoria su Discord.",
+      data: "2025-07-13"
     }
   ];
   
@@ -17,17 +17,15 @@ const annunci = [
     const container = document.getElementById("annunci-container");
     if (container) {
       annunci.forEach(annuncio => {
-        const card = document.createElement("div");
-        card.className = "col-md-6 mb-4";
-        card.innerHTML = `
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">${annuncio.titolo}</h5>
-              <p class="card-text text-muted">${annuncio.data}</p>
-              <a href="annuncio.html?id=${annuncio.id}" class="btn btn-primary">Leggi</a>
-            </div>
+        const col = document.createElement("div");
+        col.className = "col-md-6";
+        col.innerHTML = `
+          <div class="card h-100 p-3">
+            <h5 class="card-title">${annuncio.titolo}</h5>
+            <p class="text-secondary">${annuncio.data}</p>
+            <a href="annuncio.html?id=${annuncio.id}" class="btn btn-outline-light mt-auto">Leggi di più</a>
           </div>`;
-        container.appendChild(card);
+        container.appendChild(col);
       });
     }
   
