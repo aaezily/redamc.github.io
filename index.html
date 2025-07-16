@@ -1,243 +1,38 @@
 <!DOCTYPE html>
-<html lang="it" data-bs-theme="dark">
+<html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guida Comandi Staff - Evercraft</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guida Staff - Home</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow-x: hidden;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: #e0e0e0;
-      scroll-behavior: smooth;
-    }
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url('https://i.imgur.com/UaT9Byn.jpg') center / cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      padding: 1rem;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0;
-      animation: fadeIn 1s ease-out;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      animation: fadeIn 1s ease-out 0.5s forwards;
-      opacity: 0;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
-    }
-    .navbar {
-      background: rgba(30, 30, 30, 0.8) !important;
-      backdrop-filter: blur(8px);
-    }
-    .nav-link {
-      transition: color 0.3s;
-    }
-    .nav-link:hover {
-      color: #00ffc8 !important;
-    }
-    .accordion-button {
-      background: #2a2a2a;
-      color: #e0e0e0;
-      transition: background 0.3s;
-    }
-    .accordion-button:not(.collapsed) {
-      background: #444;
-    }
-    .accordion-body {
-      background: #1e1e1e;
-    }
-    code {
-      background: #2a2a2a;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      color: #00ffc8;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.9rem;
-      color: #888;
-      background: #121212;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" data-aos="fade-down">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#hero">Evercraft Staff</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
+      <a class="navbar-brand" href="index.html">Guida Staff</a>
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#collapseHelper">Helper</a></li>
-          <li class="nav-item"><a class="nav-link" href="#collapseModeratore">Moderatore</a></li>
-          <li class="nav-item"><a class="nav-link" href="#collapsePermessi">Permessi</a></li>
-          <li class="nav-item"><a class="nav-link" href="#collapseRegola">Regola</a></li>
-          <li class="nav-item"><a class="nav-link" href="#collapseSupporto">Supporto</a></li>
+          <li class="nav-item"><a class="nav-link" href="comandi.html">Lista Comandi</a></li>
+          <li class="nav-item"><a class="nav-link" href="info.html">Info Staff</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <h1 data-aos="zoom-in">📘 Guida Comandi Staff</h1>
-      <p data-aos="fade-up" data-aos-delay="500">Evercraft - Usa i poteri con responsabilità</p>
+  <header class="bg-primary text-white text-center py-4">
+    <h1>Benvenuto nella Guida Staff</h1>
+    <p>Controlla gli ultimi annunci importanti qui sotto</p>
+  </header>
+
+  <main class="container my-5">
+    <div class="row" id="annunci-container">
+      <!-- Popolato da JS -->
     </div>
-  </section>
+  </main>
 
-  <!-- Accordion -->
-  <div class="container py-5">
-    <div class="accordion" id="commandAccordion">
+  <footer class="text-center py-3 bg-dark text-white">© 2025 Guida Staff</footer>
 
-      <!-- Helper -->
-      <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
-        <h2 class="accordion-header" id="headingHelper">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHelper" aria-expanded="true">
-            🟢 Comandi Helper
-          </button>
-        </h2>
-        <div id="collapseHelper" class="accordion-collapse collapse show" data-bs-parent="#commandAccordion">
-          <div class="accordion-body">
-            <ul>
-              <li><code>/ltempmute</code> - Mute temporaneo (Max 7 giorni)</li>
-              <li><code>/lkick</code> - Espulsione dal server</li>
-              <li><code>/lcheckban</code> - Controlla ban</li>
-              <li><code>/lcheckmute</code> - Controlla mute</li>
-              <li><code>/lunmute</code> - Rimuove mute</li>
-              <li><code>/lmutelist</code> - Lista mutati</li>
-              <li><code>/hist</code> / <code>/history</code> - Cronologia sanzioni</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Moderatore -->
-      <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
-        <h2 class="accordion-header" id="headingModeratore">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseModeratore" aria-expanded="false">
-            🔵 Comandi Moderatore
-          </button>
-        </h2>
-        <div id="collapseModeratore" class="accordion-collapse collapse" data-bs-parent="#commandAccordion">
-          <div class="accordion-body">
-            <ul>
-              <li><code>/lban</code> - Ban permanente</li>
-              <li><code>/lunban</code> - Rimuove ban</li>
-              <li><code>/lipban</code> - Ban IP</li>
-              <li><code>/lbanlist</code> - Lista bannati</li>
-              <li><code>/ecsee</code> - Visualizza Ender Chest</li>
-              <li><code>/invsee</code> - Visualizza Inventario</li>
-              <li><code>/pv &lt;nome&gt; &lt;#&gt;</code> - Accesso private vault</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Permessi Generici -->
-      <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
-        <h2 class="accordion-header" id="headingPermessi">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePermessi" aria-expanded="false">
-            🔸 Permessi Generici
-          </button>
-        </h2>
-        <div id="collapsePermessi" class="accordion-collapse collapse" data-bs-parent="#commandAccordion">
-          <div class="accordion-body">
-            <ul>
-              <li><code>/rcs chat</code> - Modalità staff chat</li>
-              <li><code>/rcs chat &lt;msg&gt;</code> - Messaggio in staffchat</li>
-              <li><code>@&lt;msg&gt;</code> - Quick message staffchat</li>
-              <li><code>/rcs hidechat</code> - Nascondi staffchat</li>
-              <li><code>/rcs showchat</code> - Mostra staffchat</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Regola Obbligatoria -->
-      <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
-        <h2 class="accordion-header" id="headingRegola">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRegola" aria-expanded="false">
-            ⚠️ Regola Obbligatoria
-          </button>
-        </h2>
-        <div id="collapseRegola" class="accordion-collapse collapse" data-bs-parent="#commandAccordion">
-          <div class="accordion-body">
-            <p>Tutti i comandi di moderazione devono iniziare con <strong>L</strong>:</p>
-            <ul>
-              <li><code>/lban</code> - Corretto</li>
-              <li><code>/ban</code> - Errato</li>
-              <li><code>/ltempmute</code> - Corretto</li>
-              <li><code>/mute</code> - Errato</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Supporto -->
-      <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
-        <h2 class="accordion-header" id="headingSupporto">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSupporto" aria-expanded="false">
-            📩 Supporto
-          </button>
-        </h2>
-        <div id="collapseSupporto" class="accordion-collapse collapse" data-bs-parent="#commandAccordion">
-          <div class="accordion-body">
-            <p>Per problemi o suggerimenti, contatta un amministratore nel canale <strong>#🚨〃staff-mc-only</strong>.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer data-aos="fade-up" data-aos-delay="600">
-    © 2025 Evercraft - Tutti i diritti riservati
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
