@@ -14,18 +14,39 @@ const annunci = [
   ];
   
   document.addEventListener("DOMContentLoaded", () => {
+    // Attiva animazioni body
+    document.body.classList.add('loaded');
+  
     const container = document.getElementById("annunci-container");
     if (container) {
-      annunci.forEach(a => {
+      annunci.forEach((a, i) => {
         const div = document.createElement("div");
         div.className = "card-annuncio";
+        div.style.animationDelay = `${i * 0.1}s`; // Stagger animazioni
         div.innerHTML = `
           <h5>${a.titolo}</h5>
           <p class="text-secondary">${a.data}</p>
-          <a href="annuncio.html?id=${a.id}" class="btn btn-outline-light btn-sm">Leggi</a>
+          <button class="btn btn-outline-light btn-sm" onclick="openAnnuncio(${a.id})">Leggi</button>
         `;
         container.appendChild(div);
       });
     }
   });
+  
+  // Funzione apertura annuncio con toast
+  function openAnnuncio(id) {
+    showToast("🔔 Annuncio aperto!");
+    setTimeout(() => {
+      window.location.href = `annuncio.html?id=${id}`;
+    }, 800); // Delay per mostrare il toast
+  }
+  
+  // Toast Bootstrap dinamico
+  function showToast(msg) {
+    const toastEl = document.getElementById("toastNotifica");
+    const toastBody = document.getElementById("toastBody");
+    toastBody.textContent = msg;
+    const toast = new bootstrap.Toast(toastEl);
+    toast.show();
+  }
   
